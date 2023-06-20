@@ -25,8 +25,8 @@ class Add extends React.PureComponent {
 
     return (
       <SubPage
-        title='Add Address'
-        actionTitle='Cancel'
+        title='اضافة عنوان'
+        actionTitle='الغاء'
         handleAction={() => history.goBack()}
       >
         <AddAddress

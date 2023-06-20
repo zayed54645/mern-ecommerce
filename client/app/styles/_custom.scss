@@ -1,1 +1,34 @@
 // Here you can add other styles
+.item-customize {
+    .input-box {
+        text-align: start;
+    }
+}
+
+.add-review {
+    text-align: start;
+
+    .rev-btn {
+        text-align: end;
+    }
+}
+
+.header {
+    display: contents;
+}
+.reset-form {
+text-align: right;
+}
+.reset-actions {
+    text-align: left;
+}
+
+.profile-actions{
+    text-align: left;
+}
+.input-box {
+    text-align: right;
+}
+.select-box{
+    text-align: right;
+}

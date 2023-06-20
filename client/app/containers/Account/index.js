@@ -22,7 +22,7 @@ class Account extends React.PureComponent {
 
     return (
       <div className='account'>
-        <SubPage title={'Account Details'} isMenuOpen={null}>
+        <SubPage title={'معلومات الحساب'} isMenuOpen={null}>
           <AccountDetails
             user={user}
             accountChange={accountChange}

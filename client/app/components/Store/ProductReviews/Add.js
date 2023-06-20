@@ -82,7 +82,7 @@ const Add = props => {
           </Col>
         </Row>
         <div className='mt-4'>
-          <Button type='submit' text='Publish Review' />
+          <Button type='submit' className="rev-btn" text='Publish Review' />
         </div>
       </form>
     </div>

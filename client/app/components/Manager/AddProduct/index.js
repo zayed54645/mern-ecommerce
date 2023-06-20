@@ -43,9 +43,9 @@ const AddProduct = props => {
             <Input
               type={'text'}
               error={formErrors['sku']}
-              label={'Sku'}
+              label={'نوع المنتج'}
               name={'sku'}
-              placeholder={'Product Sku'}
+              placeholder={'نوع المنتج'}
               value={productFormData.sku}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -56,9 +56,9 @@ const AddProduct = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'الاسم'}
               name={'name'}
-              placeholder={'Product Name'}
+              placeholder={'اسم المنتج'}
               value={productFormData.name}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -69,9 +69,9 @@ const AddProduct = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Description'}
+              label={'وصف'}
               name={'description'}
-              placeholder={'Product Description'}
+              placeholder={'وصف المنتج'}
               value={productFormData.description}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -82,10 +82,10 @@ const AddProduct = props => {
             <Input
               type={'number'}
               error={formErrors['quantity']}
-              label={'Quantity'}
+              label={'كمية'}
               name={'quantity'}
               decimals={false}
-              placeholder={'Product Quantity'}
+              placeholder={'كمية المنتج'}
               value={productFormData.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -96,8 +96,8 @@ const AddProduct = props => {
             <Input
               type={'number'}
               error={formErrors['price']}
-              label={'Price'}
-              name={'price'}
+              label={'السعر'}
+              name={'Price'}
               min={1}
               placeholder={'Product Price'}
               value={productFormData.price}
@@ -109,7 +109,7 @@ const AddProduct = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['taxable']}
-              label={'Taxable'}
+              label={'خاضع للضريبة'}
               name={'taxable'}
               options={taxableSelect}
               value={productFormData.taxable}
@@ -123,7 +123,7 @@ const AddProduct = props => {
               disabled={user.role === ROLES.Merchant}
               error={formErrors['brand']}
               name={'brand'}
-              label={'Select Brand'}
+              label={'اختيار المنتج'}
               value={
                 user.role === ROLES.Merchant ? brands[1] : productFormData.brand
               }
@@ -138,8 +138,8 @@ const AddProduct = props => {
               type={'file'}
               error={formErrors['file']}
               name={'image'}
-              label={'file'}
-              placeholder={'Please Upload Image'}
+              label={'ملف'}
+              placeholder={'الرجاء اضافة صورا'}
               value={image}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -149,8 +149,8 @@ const AddProduct = props => {
           <Col xs='12' md='12' className='my-2'>
             <Switch
               id={'active-product'}
-              name={'isActive'}
-              label={'Active?'}
+              name={'نشيط'}
+              label={'نشيط?'}
               checked={productFormData.isActive}
               toggleCheckboxChange={value => productChange('isActive', value)}
             />
@@ -158,7 +158,7 @@ const AddProduct = props => {
         </Row>
         <hr />
         <div className='add-product-actions'>
-          <Button type='submit' text='Add Product' />
+          <Button type='submit' text='اضافة المنتج' />
         </div>
       </form>
     </div>

@@ -34,7 +34,7 @@ const OrderMeta = props => {
           variant='link'
           icon={<ArrowBackIcon />}
           size='sm'
-          text='Back to orders'
+          text='العوده للطلبات'
           onClick={onBack}
         ></Button>
       </div>

@@ -29,9 +29,9 @@ const EditAddress = props => {
             <Input
               type={'text'}
               error={formErrors['address']}
-              label={'Address'}
+              label={'العنوان'}
               name={'address'}
-              placeholder={'Address: Street, House No / Apartment No'}
+              placeholder={'العنوان: الشارع, رقم البيت / رقم الشقه'}
               value={address.address}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -68,9 +68,9 @@ const EditAddress = props => {
             <Input
               type={'text'}
               error={formErrors['country']}
-              label={'Country'}
+              label={'الدوله'}
               name={'country'}
-              placeholder={'Please Enter Your Country'}
+              placeholder={'الرجاء كتابة الدوله'}
               value={address.country}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -81,9 +81,9 @@ const EditAddress = props => {
             <Input
               type={'text'}
               error={formErrors['zipCode']}
-              label={'Zipcode'}
+              label={'الرمز البريد'}
               name={'zipCode'}
-              placeholder={'Please Enter Your Zipcode'}
+              placeholder={'الرجاء إدخال الرمز البريدي الخاص بك'}
               value={address.zipCode}
               onInputChange={(name, value) => {
                 addressChange(name, value);
@@ -93,7 +93,7 @@ const EditAddress = props => {
           <Col xs='12' md='12'>
             <Checkbox
               id={'default'}
-              label={'As the Default'}
+              label={'افتراضي'}
               name={'isDefault'}
               checked={address.isDefault}
               onChange={(name, value) => {

@@ -12,8 +12,8 @@ const OrderSearch = props => {
   return (
     <div className='mb-3'>
       <SearchBar
-        name='order'
-        placeholder='Type the complete order ID'
+        name='الطلبات'
+        placeholder='اكتب معرف الطلب الكامل'
         btnText='Search'
         onSearch={props.onSearch}
         onBlur={props.onBlur}

@@ -3,7 +3,7 @@
   visibility: hidden;
   position: fixed;
   top: 0;
-  right: -100%;
+  left: -100%;
   background-color: $white;
   height: 100%;
   width: 470px;
@@ -22,7 +22,7 @@
 .mini-cart-open {
   .mini-cart {
     visibility: visible;
-    right: 0;
+    left: 0;
     @include transition($layout-transition-higher-speed);
   }
 

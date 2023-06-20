@@ -74,7 +74,7 @@ class Application extends React.PureComponent {
 
   render() {
     return (
-      <div className='application'>
+      <div className='application' dir='rtl'>
         <Notification />
         <Navigation />
         <main className='main'>

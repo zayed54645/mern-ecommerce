@@ -34,9 +34,9 @@ const AddMerchant = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'الاسم'}
               name={'name'}
-              placeholder={'Your Full Name'}
+              placeholder={'الاسم الكامل'}
               value={merchantFormData.name}
               onInputChange={(name, value) => {
                 merchantChange(name, value);
@@ -47,9 +47,9 @@ const AddMerchant = props => {
             <Input
               type={'text'}
               error={formErrors['email']}
-              label={'Email Address'}
+              label={'اضافة البريد الالكتروني'}
               name={'email'}
-              placeholder={'Your Email Address'}
+              placeholder={'بريدك الالكتروني'}
               value={merchantFormData.email}
               onInputChange={(name, value) => {
                 merchantChange(name, value);
@@ -60,7 +60,7 @@ const AddMerchant = props => {
             <Input
               type={'text'}
               error={formErrors['phoneNumber']}
-              label={'Phone Number'}
+              label={'رقم الهاتف'}
               name={'phoneNumber'}
               placeholder={'Your Phone Number'}
               value={merchantFormData.phoneNumber}
@@ -73,9 +73,9 @@ const AddMerchant = props => {
             <Input
               type={'text'}
               error={formErrors['brandName']}
-              label={'Brand'}
-              name={'brandName'}
-              placeholder={'Your Business Brand'}
+              label={'العلامة التجارية'}
+              name={'brand'}
+              placeholder={'العلامة التجارية لعملك'}
               value={merchantFormData.brand}
               onInputChange={(name, value) => {
                 merchantChange(name, value);
@@ -86,9 +86,9 @@ const AddMerchant = props => {
             <Input
               type={'textarea'}
               error={formErrors['business']}
-              label={'Business'}
+              label={'عمل'}
               name={'business'}
-              placeholder={'Please Describe Your Business'}
+              placeholder={'يرجى وصف عملك'}
               value={merchantFormData.business}
               onInputChange={(name, value) => {
                 merchantChange(name, value);

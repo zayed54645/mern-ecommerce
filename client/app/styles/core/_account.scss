@@ -1,4 +1,5 @@
 .account {
+  text-align: right;
   .info {
     margin-bottom: 10px;
     @include flex();
@@ -13,6 +14,7 @@
 
     .desc {
       flex: 1;
+      text-align: right;
       @include media-breakpoint-down(xs) {
         @include flex();
         justify-content: space-between;
@@ -21,6 +23,9 @@
 
       .provider-email {
         text-transform: capitalize;
+      }
+      .one-line-ellipsis {
+        margin-left: 10px;
       }
     }
 

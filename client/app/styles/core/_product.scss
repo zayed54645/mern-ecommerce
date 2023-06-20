@@ -157,6 +157,10 @@
     @include flex();
     flex-direction: column;
     height: 100%;
+
+    .item-details {
+      text-align: start;
+    }
   }
 
   .review-container {

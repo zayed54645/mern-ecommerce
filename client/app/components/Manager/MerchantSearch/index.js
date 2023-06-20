@@ -12,8 +12,8 @@ const MerchantSearch = props => {
   return (
     <div className='mb-3'>
       <SearchBar
-        name='merchant'
-        placeholder='Type email, phone number, brand or status'
+        name='التاجر'
+        placeholder='اكتب البريد الإلكتروني أو رقم الهاتف أو العلامة التجارية أو الحالة'
         btnText='Search'
         onSearch={props.onSearch}
         onBlur={props.onBlur}

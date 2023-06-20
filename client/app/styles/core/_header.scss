@@ -15,6 +15,8 @@
 .header {
   background-color: $white;
   border-bottom: $border-primary;
+  align-self: center;
+
 
   .logo {
     font-size: $font-size-heading-large !important;
@@ -29,6 +31,7 @@
     left: 0;
     right: 0;
     z-index: 998;
+    
   }
 }
 
@@ -40,6 +43,10 @@
 
   @include media-breakpoint-up(lg) {
     // height: 60px;
+    
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 10px;
 
     padding: 22px ​0px;
   }

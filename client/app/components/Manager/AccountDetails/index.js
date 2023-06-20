@@ -25,6 +25,7 @@ const AccountDetails = props => {
     <div className='account-details'>
       <div className='info'>
         <div className='desc'>
+        <UserRole user={user} />
           <p className='one-line-ellipsis mr-3'>
             {user.provider === EMAIL_PROVIDER.Email ? (
               user.email
@@ -34,7 +35,6 @@ const AccountDetails = props => {
               </span>
             )}
           </p>
-          <UserRole user={user} />
         </div>
       </div>
       <form onSubmit={handleSubmit}>
@@ -42,9 +42,9 @@ const AccountDetails = props => {
           <Col xs='12' md='6'>
             <Input
               type={'text'}
-              label={'First Name'}
+              label={'الاسم'}
               name={'firstName'}
-              placeholder={'Please Enter Your First Name'}
+              placeholder={'الرجاء كتابة الاسم هنا'}
               value={user.firstName ? user.firstName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -54,9 +54,9 @@ const AccountDetails = props => {
           <Col xs='12' md='6'>
             <Input
               type={'text'}
-              label={'Last Name'}
+              label={'الكنيه'}
               name={'lastName'}
-              placeholder={'Please Enter Your Last Name'}
+              placeholder={'الرجاء كتابة الكنيه'}
               value={user.lastName ? user.lastName : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -78,10 +78,11 @@ const AccountDetails = props => {
           </Col> */}
           <Col xs='12' md='12'>
             <Input
-              type={'text'}
-              label={'Phone Number'}
+              type={'tel'}
+              pattern={'[+]{1}[0-9]{11,14}'}
+              label={'رقم الهاتف'}
               name={'phoneNumber'}
-              placeholder={'Please Enter Your Phone Number'}
+              placeholder={'الرجاء كتابة رقم الهاتف'}
               value={user.phoneNumber ? user.phoneNumber : ''}
               onInputChange={(name, value) => {
                 accountChange(name, value);
@@ -91,7 +92,7 @@ const AccountDetails = props => {
         </Row>
         <hr />
         <div className='profile-actions'>
-          <Button type='submit' variant='secondary' text='Save changes' />
+          <Button type='submit' variant='secondary' text='حفض التغيرات' />
         </div>
       </form>
     </div>
