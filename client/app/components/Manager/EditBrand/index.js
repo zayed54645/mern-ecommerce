@@ -33,7 +33,7 @@ const EditBrand = props => {
   return (
     <div className='edit-brand'>
       <div className='d-flex flex-row mx-0 mb-3'>
-        <label className='mr-1'>Brand link </label>
+        <label className='mr-1'>رابط الماركه </label>
         <Link to={`/shop/brand/${brand.slug}`} className='default-link'>
           {brand.slug}
         </Link>
@@ -44,9 +44,9 @@ const EditBrand = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'الاسم'}
               name={'name'}
-              placeholder={'Brand Name'}
+              placeholder={'اسم البراند'}
               value={brand.name}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -70,9 +70,9 @@ const EditBrand = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Description'}
+              label={'الوصف'}
               name={'description'}
-              placeholder={'Brand Description'}
+              placeholder={'وصف الماركه'}
               value={brand.description}
               onInputChange={(name, value) => {
                 brandChange(name, value);
@@ -86,7 +86,7 @@ const EditBrand = props => {
               tooltipContent={`Disabling ${brand.name} will also disable all ${brand.name} products.`}
               id={`enable-brand-${brand._id}`}
               name={'isActive'}
-              label={'Active?'}
+              label={'تنشيط?'}
               checked={brand.isActive}
               toggleCheckboxChange={value => activateBrand(brand._id, value)}
             />
@@ -96,12 +96,12 @@ const EditBrand = props => {
         <div className='d-flex flex-column flex-md-row'>
           <Button
             type='submit'
-            text='Save'
+            text='حفض'
             className='mb-3 mb-md-0 mr-0 mr-md-3'
           />
           <Button
             variant='danger'
-            text='Delete'
+            text='حذف'
             disabled={user.role === ROLES.Merchant}
             onClick={() => deleteBrand(brand._id)}
           />

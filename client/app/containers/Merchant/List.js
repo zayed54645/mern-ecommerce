@@ -74,7 +74,7 @@ class List extends React.PureComponent {
     return (
       <div className='merchant-dashboard'>
         <SubPage
-          title={'Merchants'}
+          title={'تاجر'}
           actionTitle={user.role === ROLES.Admin && 'Add'}
           handleAction={() => history.push('/dashboard/merchant/add')}
         />
@@ -92,7 +92,7 @@ class List extends React.PureComponent {
               />
             )}
             <SearchResultMeta
-              label='merchants'
+              label='تاجر'
               count={
                 isSearch ? filteredMerchants.length : advancedFilters.count
               }

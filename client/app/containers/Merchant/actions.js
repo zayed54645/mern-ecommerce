@@ -243,7 +243,7 @@ export const merchantSignUp = token => {
       await axios.post(`/api/merchant/signup/${token}`, merchant);
 
       const successfulOptions = {
-        title: `You have signed up successfully! Please sign in with the email and password. Thank you!`,
+        title: `تم تسجيل بريدك الالكتروني بنجاح! يرجى اضافة البريد الالكتروني و كلمة المرور. شكرا جزيلا!`,
         position: 'tr',
         autoDismiss: 1
       };

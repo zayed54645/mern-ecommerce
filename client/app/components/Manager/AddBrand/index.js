@@ -42,7 +42,7 @@ const AddBrand = props => {
               type={'textarea'}
               error={formErrors['description']}
               label={'وصف'}
-              name={'وصف'}
+              name={'description'}
               placeholder={'وصف الماركه'}
               value={brandFormData.description}
               onInputChange={(name, value) => {

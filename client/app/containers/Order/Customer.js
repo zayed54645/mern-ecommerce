@@ -67,8 +67,8 @@ class Customer extends React.PureComponent {
     return (
       <div className='order-dashboard'>
         <SubPage
-          title='Customer Orders'
-          actionTitle='My Orders'
+          title='طلبات العملاء'
+          actionTitle='طلباتي'
           handleAction={() =>
             user.role === ROLES.Admin && history.push('/dashboard/orders')
           }
@@ -88,14 +88,14 @@ class Customer extends React.PureComponent {
               )}
 
               <SearchResultMeta
-                label='orders'
+                label='الطلبات'
                 count={isSearch ? filteredOrders.length : advancedFilters.count}
               />
               <OrderList orders={filteredOrders} />
             </>
           )}
           {!isLoading && !displayOrders && (
-            <NotFound message='No orders found.' />
+            <NotFound message='لايوجد اي طلب.' />
           )}
         </SubPage>
       </div>

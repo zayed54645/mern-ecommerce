@@ -61,7 +61,7 @@ class List extends React.PureComponent {
     return (
       <div className='order-dashboard'>
         <SubPage
-          title='Your Orders'
+          title='طلباتك'
           actionTitle={user.role === ROLES.Admin && 'Customer Orders'}
           handleAction={() =>
             user.role === ROLES.Admin &&
@@ -85,7 +85,7 @@ class List extends React.PureComponent {
               )}
 
               <SearchResultMeta
-                label='orders'
+                label='الطلبات'
                 count={isSearch ? filteredOrders.length : advancedFilters.count}
               />
               <OrderList orders={filteredOrders} />

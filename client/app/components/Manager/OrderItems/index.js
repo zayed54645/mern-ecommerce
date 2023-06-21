@@ -50,7 +50,7 @@ const OrderItems = props => {
     } else if (item.status !== 'Cancelled') {
       if (!isAdmin) {
         return (
-          <DropdownConfirm label='Cancel'>
+          <DropdownConfirm label='الغاء'>
             <div className='d-flex flex-column align-items-center justify-content-center p-2'>
               <p className='text-center mb-2'>{`Are you sure you want to cancel ${item.product?.name}.`}</p>
               <Button
@@ -80,7 +80,7 @@ const OrderItems = props => {
 
   return (
     <div className='order-items pt-3'>
-      <h2>Order Items</h2>
+      <h2>طلب بضاعة</h2>
       <Row>
         {order.products.map((item, index) => (
           <Col xs='12' key={index} className='item'>
@@ -114,7 +114,7 @@ const OrderItems = props => {
                           </div>
                         </>
                       ) : (
-                        <h4>Not Available</h4>
+                        <h4>غير متوفر</h4>
                       )}
                     </div>
                     <div className='d-flex justify-content-between flex-wrap d-md-none mt-1'>
@@ -137,18 +137,18 @@ const OrderItems = props => {
                 <div className='d-none d-md-flex justify-content-between align-items-center box'>
                   <div className='text-center'>
                     <p className='order-label order-status'>{`${item.status}`}</p>
-                    <p>Status</p>
+                    <p>الحاله</p>
                   </div>
 
                   <div className='text-center'>
                     <p className='order-label'>{` ${item.quantity}`}</p>
-                    <p>Quantity</p>
+                    <p>الكميه</p>
                   </div>
 
                   <div className='text-center'>
                     <p className='order-label'>{` $${item.totalPrice}`}</p>
 
-                    <p>Total Price</p>
+                    <p>المبلغ الكامل</p>
                   </div>
                 </div>
               </div>

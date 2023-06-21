@@ -42,19 +42,19 @@ const MerchantList = props => {
       {merchants.map((merchant, index) => (
         <div key={index} className='merchant-box'>
           <div className='mb-3 p-4'>
-            <label className='text-black'>Business</label>
+            <label className='text-black'>العمل</label>
             <p className='fw-medium text-truncate'>{merchant.business}</p>
-            <label className='text-black'>Brand</label>
+            <label className='text-black'>الماركه</label>
             <p className='text-truncate'>{merchant.brandName}</p>
-            <label className='text-black'>Name</label>
+            <label className='text-black'>الاسم</label>
             <p className='text-truncate'>{merchant.name}</p>
-            <label className='text-black'>Email</label>
+            <label className='text-black'>البريد الالكتروني</label>
             <p className='text-truncate'>
               {merchant.email ? merchant.email : 'N/A'}
             </p>
-            <label className='text-black'>Phone Number</label>
+            <label className='text-black'>رقم الهاتف</label>
             <p>{merchant.phoneNumber}</p>
-            <label className='text-black'>Request date</label>
+            <label className='text-black'>تاريخ الطلب</label>
             <p>{formatDate(merchant.created)}</p>
 
             <hr />

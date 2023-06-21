@@ -62,7 +62,7 @@ const AddMerchant = props => {
               error={formErrors['phoneNumber']}
               label={'رقم الهاتف'}
               name={'phoneNumber'}
-              placeholder={'Your Phone Number'}
+              placeholder={'رقم هاتفك'}
               value={merchantFormData.phoneNumber}
               onInputChange={(name, value) => {
                 merchantChange(name, value);

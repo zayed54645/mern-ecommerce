@@ -37,13 +37,10 @@ const OrderList = props => {
         <div key={index} className='order-box'>
           <Link to={`/order/${order._id}`} className='d-block box-link'>
             <div className='d-flex flex-column flex-lg-row mb-3'>
-              <div className='order-first-item p-lg-3'>
-                {renderFirstItem(order)}
-              </div>
               <div className='d-flex flex-column flex-xl-row justify-content-between flex-1 ml-lg-2 mr-xl-4 p-3'>
                 <div className='order-details'>
                   <div className='mb-1'>
-                    <span>Status</span>
+                    <span>الحاله</span>
                     {order?.products ? (
                       <span className='order-label order-status'>{` ${order?.products[0].status}`}</span>
                     ) : (
@@ -51,22 +48,25 @@ const OrderList = props => {
                     )}
                   </div>
                   <div className='mb-1'>
-                    <span>Order #</span>
+                    <span>طلب #</span>
                     <span className='order-label'>{` ${order._id}`}</span>
                   </div>
                   <div className='mb-1'>
-                    <span>Ordered on</span>
+                    <span>تم الطلب في تاريخ</span>
                     <span className='order-label'>{` ${formatDate(
                       order.created
                     )}`}</span>
                   </div>
                   <div className='mb-1'>
-                    <span>Order Total</span>
+                    <span>المبلغ الكامل</span>
                     <span className='order-label'>{` $${
                       order?.totalWithTax ? order?.totalWithTax : 0
                     }`}</span>
                   </div>
                 </div>
+              </div>
+              <div className='order-first-item p-lg-3'>
+                {renderFirstItem(order)}
               </div>
             </div>
           </Link>

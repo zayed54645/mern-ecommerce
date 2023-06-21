@@ -4,6 +4,7 @@
   }
 
   .review-summary {
+    text-align: right;
     .left {
       width: 20%;
 
@@ -66,6 +67,7 @@
   }
 
   .review-list {
+    text-align: right;
     .review-box {
       height: 100%;
       border-radius: $border-radius-default;

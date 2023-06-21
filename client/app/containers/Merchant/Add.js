@@ -26,15 +26,15 @@ class Add extends React.PureComponent {
 
     return (
       <SubPage
-        title='Add Merchant'
-        actionTitle='Cancel'
+        title='اضافة تاجر'
+        actionTitle='الغاء'
         handleAction={() => history.goBack()}
       >
         <AddMerchant
           merchantFormData={merchantFormData}
           formErrors={formErrors}
           isSubmitting={isSubmitting}
-          submitTitle='Add Merchant'
+          submitTitle='اضافة تاجر'
           merchantChange={merchantChange}
           addMerchant={() => addMerchant(true)}
         />

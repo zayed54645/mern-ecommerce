@@ -13,8 +13,8 @@ import Input from '../../Common/Input';
 import Button from '../../Common/Button';
 
 const recommedableSelect = [
-  { value: 1, label: 'Yes' },
-  { value: 0, label: 'No' }
+  { value: 1, label: 'نعم' },
+  { value: 0, label: 'لا' }
 ];
 
 const Add = props => {
@@ -34,9 +34,9 @@ const Add = props => {
             <Input
               type={'text'}
               error={reviewFormErrors['title']}
-              label={'Title'}
+              label={'العنوان'}
               name={'title'}
-              placeholder={'Enter Review title'}
+              placeholder={'ادخل عنوان التقييم'}
               value={reviewFormData.title}
               onInputChange={(name, value) => {
                 reviewChange(name, value);
@@ -47,9 +47,9 @@ const Add = props => {
             <Input
               type={'textarea'}
               error={reviewFormErrors['review']}
-              label={'Comment'}
+              label={'التعليق'}
               name={'review'}
-              placeholder={'Write Review'}
+              placeholder={'ادخل تعليق'}
               value={reviewFormData.review}
               onInputChange={(name, value) => {
                 reviewChange(name, value);
@@ -60,7 +60,7 @@ const Add = props => {
             <Input
               type={'stars'}
               error={reviewFormErrors['rating']}
-              label={'Rating'}
+              label={'التقييم'}
               name={'rating'}
               value={reviewFormData.rating}
               onInputChange={(name, value) => {
@@ -71,7 +71,8 @@ const Add = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={reviewFormErrors['isRecommended']}
-              label={'Will you recommend this product?'}
+              label={'هل توصي بهذا المنتج؟'}
+              placeholder={'نعم'}
               name={'isRecommended'}
               value={reviewFormData.isRecommended}
               options={recommedableSelect}
@@ -81,8 +82,8 @@ const Add = props => {
             />
           </Col>
         </Row>
-        <div className='mt-4'>
-          <Button type='submit' className="rev-btn" text='Publish Review' />
+        <div className='mt-4'  style={{ textAlign: 'left' }}>
+          <Button type='submit' className="rev-btn" text='نشر التعليق' />
         </div>
       </form>
     </div>

@@ -45,8 +45,8 @@ class Edit extends React.PureComponent {
 
     return (
       <SubPage
-        title='Edit Product'
-        actionTitle='Cancel'
+        title='تعديل المنتج'
+        actionTitle='الغاء'
         handleAction={history.goBack}
       >
         {product?._id ? (
@@ -61,7 +61,7 @@ class Edit extends React.PureComponent {
             activateProduct={activateProduct}
           />
         ) : (
-          <NotFound message='No product found.' />
+          <NotFound message='لايمكن العثور على المنتج.' />
         )}
       </SubPage>
     );

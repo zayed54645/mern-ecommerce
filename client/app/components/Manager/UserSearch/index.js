@@ -14,7 +14,7 @@ const UserSearch = props => {
       <SearchBar
         name='المعرف الخاص بك'
         placeholder='يرجى كتابة المعرف او البريد الالكتروني'
-        btnText='Search'
+        btnText='بحث'
         onSearch={props.onSearch}
         onBlur={props.onBlur}
         onSearchSubmit={props.onSearchSubmit}

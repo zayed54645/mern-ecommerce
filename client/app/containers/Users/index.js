@@ -60,7 +60,7 @@ class Users extends React.PureComponent {
 
     return (
       <div className='users-dashboard'>
-        <SubPage title='Users' />
+        <SubPage title='المستخدمين' />
         <UserSearch
           onSearch={this.handleUserSearch}
           onSearchSubmit={searchUsers}
@@ -75,13 +75,13 @@ class Users extends React.PureComponent {
               />
             )}
             <SearchResultMeta
-              label='users'
+              label='المستحدمين'
               count={isSearch ? filteredUsers.length : advancedFilters.count}
             />
             <UserList users={filteredUsers} />
           </>
         )}
-        {!isLoading && !displayUsers && <NotFound message='No users found.' />}
+        {!isLoading && !displayUsers && <NotFound message='لايوجد مستخدم.' />}
       </div>
     );
   }

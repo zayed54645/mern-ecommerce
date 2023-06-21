@@ -48,9 +48,9 @@ class MerchantSignup extends React.PureComponent {
                 <Input
                   type={'text'}
                   error={formErrors['email']}
-                  label={'Email Address'}
+                  label={'البريد الالكتروني'}
                   name={'email'}
-                  placeholder={'Please Enter Your Email'}
+                  placeholder={'الرجاء اضافة البريد الالكتروني'}
                   value={signupFormData.email}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -61,9 +61,9 @@ class MerchantSignup extends React.PureComponent {
                 <Input
                   type={'text'}
                   error={formErrors['firstName']}
-                  label={'First Name'}
+                  label={'الاسم'}
                   name={'firstName'}
-                  placeholder={'Please Enter Your First Name'}
+                  placeholder={'الرجاء كتابة الاسم'}
                   value={signupFormData.firstName}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -74,9 +74,9 @@ class MerchantSignup extends React.PureComponent {
                 <Input
                   type={'text'}
                   error={formErrors['lastName']}
-                  label={'Last Name'}
+                  label={'الكنيه'}
                   name={'lastName'}
-                  placeholder={'Please Enter Your Last Name'}
+                  placeholder={'الرجاء كتابة الكنيه'}
                   value={signupFormData.lastName}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);
@@ -86,10 +86,10 @@ class MerchantSignup extends React.PureComponent {
               <Col xs='12' md='12'>
                 <Input
                   type={'password'}
-                  label={'Password'}
+                  label={'كلمة المرور'}
                   error={formErrors['password']}
                   name={'password'}
-                  placeholder={'Please Enter Your Password'}
+                  placeholder={'الرجاء كتابة كلمة السر'}
                   value={signupFormData.password}
                   onInputChange={(name, value) => {
                     merchantSignupChange(name, value);

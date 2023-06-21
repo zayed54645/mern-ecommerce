@@ -43,9 +43,9 @@ const AddProduct = props => {
             <Input
               type={'text'}
               error={formErrors['sku']}
-              label={'نوع المنتج'}
+              label={'رمز المنتج'}
               name={'sku'}
-              placeholder={'نوع المنتج'}
+              placeholder={'رمز المنتج'}
               value={productFormData.sku}
               onInputChange={(name, value) => {
                 productChange(name, value);

@@ -41,7 +41,7 @@ class Edit extends React.PureComponent {
 
     return (
       <SubPage
-        title='Edit Brand'
+        title='اضافة ماركه'
         actionTitle='Cancel'
         handleAction={history.goBack}
       >
@@ -56,7 +56,7 @@ class Edit extends React.PureComponent {
             activateBrand={activateBrand}
           />
         ) : (
-          <NotFound message='No brand found.' />
+          <NotFound message='لاوجود لهذا المنتج.' />
         )}
       </SubPage>
     );

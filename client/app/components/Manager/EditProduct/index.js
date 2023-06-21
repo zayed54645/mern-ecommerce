@@ -40,7 +40,7 @@ const EditProduct = props => {
   return (
     <div className='edit-product'>
       <div className='d-flex flex-row mx-0 mb-3'>
-        <label className='mr-1'>Product link </label>
+        <label className='mr-1'>رابط المنتج </label>
         <Link to={`/product/${product.slug}`} className='default-link'>
           {product.slug}
         </Link>
@@ -52,9 +52,9 @@ const EditProduct = props => {
             <Input
               type={'text'}
               error={formErrors['name']}
-              label={'Name'}
+              label={'الاسم'}
               name={'name'}
-              placeholder={'Product Name'}
+              placeholder={'اسم المنتج'}
               value={product.name}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -65,9 +65,9 @@ const EditProduct = props => {
             <Input
               type={'text'}
               error={formErrors['sku']}
-              label={'Sku'}
+              label={'رمز المنتج'}
               name={'sku'}
-              placeholder={'Product Sku'}
+              placeholder={'رمز المنتج'}
               value={product.sku}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -91,9 +91,9 @@ const EditProduct = props => {
             <Input
               type={'textarea'}
               error={formErrors['description']}
-              label={'Description'}
+              label={'الوصف'}
               name={'description'}
-              placeholder={'Product Description'}
+              placeholder={'وصف المنتج'}
               value={product.description}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -104,10 +104,10 @@ const EditProduct = props => {
             <Input
               type={'number'}
               error={formErrors['quantity']}
-              label={'Quantity'}
+              label={'كمية'}
               name={'quantity'}
               decimals={false}
-              placeholder={'Product Quantity'}
+              placeholder={'وصف كمية'}
               value={product.quantity}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -118,10 +118,10 @@ const EditProduct = props => {
             <Input
               type={'number'}
               error={formErrors['price']}
-              label={'Price'}
+              label={'العر'}
               name={'price'}
               min={1}
-              placeholder={'Product Price'}
+              placeholder={'وصف السعر'}
               value={product.price}
               onInputChange={(name, value) => {
                 productChange(name, value);
@@ -131,9 +131,9 @@ const EditProduct = props => {
           <Col xs='12' md='12'>
             <SelectOption
               error={formErrors['taxable']}
-              label={'Taxable'}
+              label={'قابل للضريبه'}
               multi={false}
-              name={'taxable'}
+              name={'قابل للضريبه'}
               value={[product.taxable ? taxableSelect[0] : taxableSelect[1]]}
               options={taxableSelect}
               handleSelectChange={value => {
@@ -145,7 +145,7 @@ const EditProduct = props => {
             <Col xs='12' md='12'>
               <SelectOption
                 error={formErrors['brand']}
-                label={'Select Brand'}
+                label={'اختيار الماركه'}
                 multi={false}
                 value={product.brand}
                 options={brands}
@@ -171,13 +171,13 @@ const EditProduct = props => {
         <hr />
         <div className='d-flex flex-column flex-md-row'>
           <Button
-            type='submit'
-            text='Save'
+            type='تقديم'
+            text='حفض'
             className='mb-3 mb-md-0 mr-0 mr-md-3'
           />
           <Button
             variant='danger'
-            text='Delete'
+            text='حذف'
             onClick={() => deleteProduct(product._id)}
           />
         </div>
